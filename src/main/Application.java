@@ -4,20 +4,18 @@ import institution.University;
 import institution.interlink.Internship;
 import person.Student;
 
+import java.util.ArrayList;
+
 public class Application {
     public static void main(String[] args) {
 
-        // create university
-        University university = new University("CH.U.I.");
-        // adding/creating students to university
-        university.addStudent(new Student("Andrew Kostenko",5));
-        university.addStudent(new Student("Julia Veselkina",4));
-        university.addStudent(new Student("Maria Perechrest",3));
+        // create universities, adding students to university
+        ArrayList<University> universities = new GetData().load();
 
         // create internship
         Internship internship = new Internship("Interlink");
         // add to internship students
-        internship.setStudents(university);
+        internship.setStudents(universities);
 
         // print list of students who was successful enrolled to internship
         System.out.println("List of internship's students:");

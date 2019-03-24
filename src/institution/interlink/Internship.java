@@ -50,6 +50,26 @@ public class Internship {
     }
 
     /**
+     * Method adds students from the university.
+     *
+     * @param universities list of objects university
+     */
+    public void setStudents(ArrayList<University> universities) {
+        int avg = 0;
+        for (int u = 0; u < universities.size(); u++) {
+            for (int i = 0; i < universities.get(u).getStudentsCount(); i++) {
+                avg += universities.get(u).getStudent(i).getStudentKnowledge().getKnowledgeLevel();
+            }
+            avg = avg / universities.get(u).getStudentsCount();
+            for (int i = 0; i < universities.get(u).getStudentsCount(); i++) {
+                if (universities.get(u).getStudent(i).getStudentKnowledge().getKnowledgeLevel() >= avg) {
+                    students.add(universities.get(u).getStudent(i));
+                }
+            }
+        }
+    }
+
+    /**
      * Method returns a list of students
      *
      * @return list of students
