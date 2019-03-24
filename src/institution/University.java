@@ -37,7 +37,7 @@ public class University {
 
     /**
      * Method updates student to university
-     * @param student
+     * @param student student object
      */
     public void setStudent(Student student) {
         int index=find(student.getStudentName());
@@ -49,7 +49,7 @@ public class University {
     /**
      * Method returns student class
      * @param index student number
-     * @return student class
+     * @return student object
      */
     public Student getStudent(int index){
         return studentList.get(index);
@@ -65,7 +65,7 @@ public class University {
 
     /**
      * Method of adding student to university
-     * @param student student
+     * @param student student object
      */
     public void addStudent(Student student) {
         if(find(student.getStudentName())==-1){

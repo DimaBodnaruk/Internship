@@ -23,7 +23,7 @@ public class Internship {
 
     /**
      * Method adds student
-     * @param student student
+     * @param student student object
      */
     public void setStudent(Student student) {
         students.add(student);
@@ -31,7 +31,7 @@ public class Internship {
 
     /**
      * Method adds students from the university.
-     * @param university  university
+     * @param university  university object
      */
     public void setStudents(University university){
         int avg=0;
