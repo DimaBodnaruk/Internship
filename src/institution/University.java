@@ -14,21 +14,23 @@ public class University {
 
     /**
      * Class constructor
+     *
      * @param name university name
      */
     public University(String name) {
-        universityName=name;
+        universityName = name;
         studentList = new ArrayList<Student>();
     }
 
     /**
      * Method returns student number
+     *
      * @param name student's name
      * @return student pointer
      */
-    private int find(String name){
-        for(int i=0;i<studentList.size();i++){
-            if(studentList.get(i).getStudentName()==name){
+    private int find(String name) {
+        for (int i = 0; i < studentList.size(); i++) {
+            if (studentList.get(i).getStudentName() == name) {
                 return i;
             }
         }
@@ -37,44 +39,49 @@ public class University {
 
     /**
      * Method updates student to university
+     *
      * @param student student object
      */
     public void setStudent(Student student) {
-        int index=find(student.getStudentName());
-        if(index!=-1){
+        int index = find(student.getStudentName());
+        if (index != -1) {
             studentList.set(index, student);
         }
     }
 
     /**
      * Method returns student class
+     *
      * @param index student number
      * @return student object
      */
-    public Student getStudent(int index){
+    public Student getStudent(int index) {
         return studentList.get(index);
     }
 
     /**
      * The method returns the number of students
+     *
      * @return number of students
      */
-    public int getStudentsCount(){
+    public int getStudentsCount() {
         return studentList.size();
     }
 
     /**
      * Method of adding student to university
+     *
      * @param student student object
      */
     public void addStudent(Student student) {
-        if(find(student.getStudentName())==-1){
+        if (find(student.getStudentName()) == -1) {
             studentList.add(student);
         }
     }
 
     /**
      * Method return university name
+     *
      * @return university name
      */
     public String getUniversityName() {

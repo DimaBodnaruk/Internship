@@ -8,17 +8,19 @@ public class Knowledge {
 
     /**
      * Class constructor
+     *
      * @param level level of knowledge
      */
     public Knowledge(int level) {
-        knowledgeLevel=level;
+        knowledgeLevel = level;
     }
 
     /**
      * The method returns the level of knowledge
+     *
      * @return level of knowledge
      */
-    public int getKnowledgeLevel (){
+    public int getKnowledgeLevel() {
         return knowledgeLevel;
     }
 }

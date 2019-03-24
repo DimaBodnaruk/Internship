@@ -11,6 +11,7 @@ public class Student {
 
     /**
      * Class constructor
+     *
      * @param name student name
      */
     public Student(String name) {
@@ -19,7 +20,8 @@ public class Student {
 
     /**
      * Class constructor
-     * @param name student name
+     *
+     * @param name      student name
      * @param knowledge level of knowledge
      */
     public Student(String name, int knowledge) {
@@ -29,6 +31,7 @@ public class Student {
 
     /**
      * Method set student knowledge
+     *
      * @param knowledge knowledge level object
      */
     public void setKnowledge(Knowledge knowledge) {
@@ -37,6 +40,7 @@ public class Student {
 
     /**
      * Method returns student name
+     *
      * @return student name
      */
     public String getStudentName() {
@@ -45,6 +49,7 @@ public class Student {
 
     /**
      * Method returns student knowledge
+     *
      * @return knowledge level object
      */
     public Knowledge getStudentKnowledge() {
