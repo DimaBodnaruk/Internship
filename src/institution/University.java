@@ -87,4 +87,17 @@ public class University {
     public String getUniversityName() {
         return universityName;
     }
+
+    /**
+     * Method return avg knowledge level
+     *
+     * @return avg knowledge level
+     */
+    public int getAvgKnowledgeLevel() {
+        int avg = 0;
+        for (int i = 0; i < studentList.size(); i++) {
+            avg += studentList.get(i).getStudentKnowledge().getKnowledgeLevel();
+        }
+        return avg / studentList.size();
+    }
 }
